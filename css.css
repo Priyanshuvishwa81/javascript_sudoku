@@ -1,0 +1,156 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    background-color: #cfffb9;
+}
+.banner{
+    height: 7vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 50px;
+    margin-top: 5px;
+    color: saddlebrown;
+    font-weight: bolder;
+    user-select: none;
+}
+.next{
+    position: absolute;
+    height: 10%;
+    width: 10%;
+    /* background-color: rgb(180, 233, 233); */
+    right: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    font-size: x-large;
+}
+.next_new{
+    height: 100%;
+    width: 45%;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: chartreuse;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.solve{
+    height: 100%;
+    width: 45%;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: coral;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sudoku_outer_shell {
+    height: 85vh;
+    width: 100%;
+    /* background-color: rgb(118, 187, 187); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sudoku_inner_shell {
+    height: 90%;
+    width: 50%;
+}
+
+.my_rows {
+    float: left;
+    width: 33.1%;
+    height: 33.1%;
+    background-color: rgb(185, 164, 45);
+}
+
+.mycolumn {
+    float: left;
+    width: 32%;
+    height: 31%;
+    font-size: x-large;
+
+    border: .1px solid rgb(117, 89, 89);
+    background-color: rgb(178, 230, 212);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.mycolumn:hover {
+    background-color: rgb(163, 197, 226);
+    /* background-color: rgb(130, 232, 250); */
+}
+
+.selecter {
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    pointer-events: none;
+
+}
+
+.select_box {
+    height: 100%;
+    width: 5%;
+    border-radius: 5px;
+    background-color: rgba(125, 163, 219, 0.767);
+    /* background-color: rgb(145, 200, 248); */
+    border: 1px solid rgb(173, 160, 160);
+    box-shadow: 2px 5px 6px rgb(180, 175, 175);
+    font-size: x-large;
+    text-align: center;
+}
+
+.select_box:hover {
+    background-color: rgba(206, 224, 243, 0.884);
+    /* background-color: rgb(221, 167, 116); */
+}
+
+@media only screen and (max-width:930px) and (min-width:640px) {
+    .sudoku_inner_shell {
+        height: 70%;
+        width: 70%;
+    }
+    .select_box{
+        width: 7%;
+    }
+
+
+}
+
+@media only screen and (max-width:670px) and (min-width:300px) {
+    .sudoku_inner_shell {
+        height: 70%;
+        width: 90%;
+    }
+    .select_box{
+        width: 10%;
+    }
+
+
+}
+
+@media only screen and (max-width:522px) {
+    .sudoku_inner_shell {
+        height: 50%;
+        width: 95%;
+    }
+    .select_box{
+        width: 20%;
+    }
+
+    .mycolumn{
+        border: 0px solid red;
+    }
+}

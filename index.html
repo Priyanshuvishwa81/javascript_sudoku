@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div class="banner">
+        <div class="banner_text">Sudoku</div>
+        <!-- <div class="next">
+            <div class="next_new" id="next_game" onclick="give_me_next()">0</div>
+            <div class="solve" id="solve_my_game">1</div>
+        </div> -->
+    </div>
+    <div class="sudoku_outer_shell">
+        <div class="sudoku_inner_shell">
+            <!-- box1 -->
+            <div class="my_rows">
+                <div class="mycolumn" id="00" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="01" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="02" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="10" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="11" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="12" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="20" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="21" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="22" onclick="click_me(this.id)"></div>
+            </div>
+            <!-- box2 -->
+            <div class="my_rows">
+                <div class="mycolumn" id="03" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="04" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="05" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="13" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="14" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="15" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="23" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="24" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="25" onclick="click_me(this.id)"></div>
+            </div>
+            <!-- box3 -->
+            <div class="my_rows">
+                <div class="mycolumn" id="06" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="07" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="08" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="16" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="17" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="18" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="26" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="27" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="28" onclick="click_me(this.id)"></div>
+            </div>
+            <!-- box4 -->
+            <div class="my_rows">
+                <div class="mycolumn" id="30" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="31" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="32" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="40" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="41" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="42" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="50" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="51" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="52" onclick="click_me(this.id)"></div>
+            </div>
+            <!-- box5 -->
+            <div class="my_rows">
+                <div class="mycolumn" id="33" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="34" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="35" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="43" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="44" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="45" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="53" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="54" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="55" onclick="click_me(this.id)"></div>
+            </div>
+            <!-- box6 -->
+            <div class="my_rows">
+                <div class="mycolumn" id="36" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="37" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="38" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="46" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="47" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="48" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="56" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="57" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="58" onclick="click_me(this.id)"></div>
+            </div>
+             <!-- box7 -->
+             <div class="my_rows">
+                <div class="mycolumn" id="60" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="61" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="62" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="70" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="71" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="72" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="80" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="81" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="82" onclick="click_me(this.id)"></div>
+            </div>
+            <!-- box8 -->
+            <div class="my_rows">
+                <div class="mycolumn" id="63" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="64" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="65" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="73" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="74" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="75" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="83" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="84" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="85" onclick="click_me(this.id)"></div>
+            </div>
+            <!-- box9 -->
+            <div class="my_rows">
+                <div class="mycolumn" id="66" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="67" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="68" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="76" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="77" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="78" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="86" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="87" onclick="click_me(this.id)"></div>
+                <div class="mycolumn" id="88" onclick="click_me(this.id)"></div>
+            </div>
+
+        </div>
+        
+     
+    </div>
+    <div class="selecter" id="selecter">
+        <div class="select_box" id="000" onclick="select_me(this.id)"> </div>
+        <div class="select_box" id="001" onclick="select_me(this.id)">1</div>
+        <div class="select_box" id="002" onclick="select_me(this.id)">2</div>
+        <div class="select_box" id="003" onclick="select_me(this.id)">3</div>
+        <div class="select_box" id="004" onclick="select_me(this.id)">4</div>
+        <div class="select_box" id="005" onclick="select_me(this.id)">5</div>
+        <div class="select_box" id="006" onclick="select_me(this.id)">6</div>
+        <div class="select_box" id="007" onclick="select_me(this.id)">7</div>
+        <div class="select_box" id="008" onclick="select_me(this.id)">8</div>
+        <div class="select_box" id="009" onclick="select_me(this.id)">9</div>
+       
+    </div>
+    <script src="js.js"></script>
+</body>
+</html>
